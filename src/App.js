@@ -93,7 +93,7 @@ class App extends Component {
     return (
       <div>
         {!this.state.isSubmitted ? (
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Email address
@@ -157,8 +157,7 @@ class App extends Component {
           </form>
         ) : (
           <p>
-            {this.state.firstName}
-            {this.state.lastName}
+            {this.state.firstName} {this.state.lastName}
           </p>
         )}
       </div>
